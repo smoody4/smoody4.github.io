@@ -6,13 +6,32 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Emilia - Gatsby Starter Portfolio`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Sam Moody - Real Estate Media`,
+    // Default title of the page
+    siteTitleAlt: `Sam Moody - Real Estate Media`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Sam Moody - Real Estate Media`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://emilia.lekoarts.de`,
+    // Used for SEO
+    siteDescription: `Site description that shows up on google goes here.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@sammoody140`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia`,
       // See the theme's README for all available options
-      options: {},
+      options: {
+        name: "Sam Moody",
+        location: "United States",
+        showThemeAuthor: false
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
