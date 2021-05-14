@@ -30,7 +30,10 @@ module.exports = {
       options: {
         name: "Sam Moody",
         location: "United States",
-        showThemeAuthor: false
+        showThemeAuthor: false,
+        socialMedia: [{title: `Instagram`, href: `https://www.instagram.com/sammoody140/`},
+                      {title: `LinkedIn`, href: `https://www.linkedin.com/in/sam-moody-60514a1b6/`}],
+        formatString: `MM.DD.YYYY`
       },
     },
     {
